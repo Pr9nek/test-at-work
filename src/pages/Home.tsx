@@ -55,6 +55,7 @@ export default function Home() {
                 {archived.length > 0 && (
                   <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Архив</h2>
+                    <hr className={styles.divider}></hr>
                     <div className={styles.usersGrid}>
                       {archived.map((u) => (
                         <UserCard

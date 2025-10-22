@@ -143,7 +143,7 @@ export default function UserCard({
       <div className={styles.infoAndActions}>
         <div className={styles.userInfo}>
           <div className={styles.userDetails}>
-            <div className={styles.username}>@{user.username}</div>
+            <div className={styles.username}>{user.username}</div>
             <div className={styles.company}>{user.company?.name}</div>
           </div>
           <div className={styles.city}>{user.address?.city}</div>

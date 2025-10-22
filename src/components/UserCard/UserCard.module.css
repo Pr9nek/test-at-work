@@ -1,9 +1,7 @@
 .userCard {
   position: relative;
   display: flex;
-  /* align-items: flex-start; */
   gap: 24px;
-  /* justify-content: space-between; */
   padding: 24px;
   background: #fff;
   border-radius: 20px;
@@ -16,9 +14,9 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.userCard.archived {
-  background: #f3f4f6;
-  opacity: 0.8;
+.userCard.archived 
+  .ava {
+  filter: grayscale(100%);
 }
 
 .ava {
@@ -27,7 +25,7 @@
 }
 
 .infoAndActions {
-  display: contents; /* На десктопе ведёт себя как будто контейнера нет */
+  display: contents; 
 }
 
 .userInfo {
@@ -50,7 +48,6 @@
   color: #64748b;
   font-weight: 600;
   white-space: normal; 
-  word-break: break-word;
 }
 
 .city, .company {
@@ -88,14 +85,12 @@
 .menuButton:focus, 
 .menuButton:focus-visible { 
   outline: none; 
-  /* Если вы хотите оставить визуальный эффект для доступности, 
-     можно заменить его на свой собственный box-shadow */
 }
 .dropdown {
   position: absolute;
   top: 30px;
   right: 0;
-  min-width: 144px;
+  min-width: 200px;
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 8px 28px 0 rgba(28,44,94,.15);
@@ -141,7 +136,7 @@
   }
 
   .infoAndActions {
-    display: flex; /* На мобилке становится flex контейнером */
+    display: flex; 
     width: 100%;
     justify-content: space-between;
     align-items: flex-start;
@@ -156,9 +151,22 @@
   .actionsContainer {
     flex-shrink: 0;
   }
+  .dropdown {
+    min-width: 150px;
+    top: 25px;
+  }
 }
 
 @media (max-width: 650px) {
   .userCard {
     width: 162px;
-  }}
+  }
+  .username {
+    word-break: break-word;
+  }
+  .dropdown {
+    min-width: 162px;
+    top: 25px;
+  }
+
+}
