@@ -10,7 +10,7 @@ export default function Header() {
         At-Work
       </Link>
       
-      <nav className={styles.nav}>
+      {/* <nav className={styles.nav}>
         <Link 
           to="/" 
           className={`${styles.navItem} ${location.pathname === '/' ? styles.active : ''}`}
@@ -35,7 +35,7 @@ export default function Header() {
         >
           Безопасность
         </Link>
-      </nav>
+      </nav> */}
     </header>
   );
 }

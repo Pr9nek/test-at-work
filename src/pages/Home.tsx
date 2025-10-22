@@ -1,7 +1,7 @@
 import { useLoaderData, Await } from 'react-router-dom';
 import { Suspense } from 'react';
 import { useUserStore } from '../store/users';
-import UserCard from '../components/UserCard';
+import UserCard from '../components/UserCard/UserCard';
 import styles from './Home.module.css';
 
 type ApiUser = {
@@ -20,7 +20,6 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Пользователи</h1>
       <Suspense fallback={<div>Загрузка списка...</div>}>
         <Await resolve={data.users}>
           {(users: ApiUser[]) => {
@@ -40,6 +39,7 @@ export default function Home() {
               <>
                 <section className={styles.section}>
                   <h2 className={styles.sectionTitle}>Активные</h2>
+                  <hr className={styles.divider}></hr>
                   <div className={styles.usersGrid}>
                     {active.map((u) => (
                       <UserCard

@@ -1,0 +1,388 @@
+/* .userCard {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 24px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px 0 rgba(28, 44, 94, 0.08);
+  border: none;
+  position: relative;
+  transition: box-shadow 0.2s;
+  max-width: 360px;
+}
+
+.userCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.userCard.archived {
+  background: #f3f4f6;
+  opacity: 0.8;
+}
+
+.avaAndInfo {
+  display: flex;
+  gap: 20px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 130px;
+  /* height: 100%; */
+/* } */
+
+/* .leftColumn {
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 112px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.centerColumn {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-right: 12px;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  white-space: nowrap;
+}
+
+.statusBadge {
+  background: #fbbf24;
+  color: #fff;
+  font-size: 11px;
+  border-radius: 8px;
+  padding: 2px 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.username {
+  font-size: 15px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.cityCompanyRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.city, .company {
+  font-size: 14px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.bullet {
+  color: #d1d5db;
+  font-size: 18px;
+}
+
+.contactRow {
+  display: flex;
+  gap: 18px;
+  margin-top: 2px;
+}
+
+.contact {
+  color: #2563eb;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: text-decoration 0.2s;
+}
+
+.contact:hover {
+  text-decoration: underline;
+}
+
+.actionsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  /* min-width: 125px; 
+}
+
+.editButton {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(37, 99, 235, 0.07);
+  cursor: pointer;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  transition: background 0.18s;
+}
+
+.editButton:hover {
+  background: #1d4ed8;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menuButton:hover {
+  color: rgba(34, 160, 188, 1);
+}
+.menuButton:active {
+  color: rgba(89, 89, 89, 1);
+}
+
+.dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  min-width: 144px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px 0 rgba(28,44,94,.15);
+  padding: 8px 0;
+  z-index: 20;
+  border: 1px solid #eef1f5;
+}
+
+.dropdownItem {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #1e293b;
+  background: none;
+  border: none;
+  text-align: left;
+  border-radius: 7px;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  color: rgba(34, 160, 188, 1);
+}
+
+@media (max-width: 768px) {
+
+  .userCard {
+    padding: 12px 8px;
+    gap: 12px;
+   
+  }
+
+  .avaAndInfo {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+
+  }
+  
+  .avatar {
+    width: 130px;
+    height: 120px;
+    border-radius: 11px;
+  }
+
+  .userInfo {
+
+  }
+
+
+  .actionsContainer {
+
+
+  }
+} 
+*/
+.userCard {
+  position: relative;
+  display: flex;
+  /* align-items: flex-start; */
+  gap: 24px;
+  /* justify-content: space-between; */
+  padding: 24px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px 0 rgba(28, 44, 94, 0.08);
+  transition: box-shadow 0.2s;
+  max-width: 360px;
+}
+
+.userCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.userCard.archived {
+  background: #f3f4f6;
+  opacity: 0.8;
+}
+
+.ava {
+  display: flex;
+  gap: 20px;
+}
+
+.infoAndActions {
+  display: contents; /* На десктопе ведёт себя как будто контейнера нет */
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 130px;
+  flex: 1;
+}
+
+.avatar {
+  width: 112px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.username {
+  font-size: 15px;
+  color: #64748b;
+  font-weight: 600;
+  white-space: normal; 
+  word-break: break-word;
+}
+
+.city, .company {
+  font-size: 14px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.actionsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.menuButton:hover {
+  color: rgba(34, 160, 188, 1);
+}
+
+.menuButton:active {
+  color: rgba(89, 89, 89, 1);
+}
+
+.dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  min-width: 144px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px 0 rgba(28,44,94,.15);
+  padding: 8px 0;
+  z-index: 20;
+  border: 1px solid #eef1f5;
+}
+
+.dropdownItem {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #1e293b;
+  background: none;
+  border: none;
+  text-align: left;
+  border-radius: 7px;
+  transition: color 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownItem:hover {
+  color: rgba(34, 160, 188, 1);
+}
+
+@media (max-width: 768px) {
+  .userCard {
+    padding: 12px 8px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ava {
+    width: 100%;
+  }
+  
+  .avatar {
+    width: 100%;
+    height: 140px;
+    border-radius: 11px;
+  }
+
+  .infoAndActions {
+    display: flex; /* На мобилке становится flex контейнером */
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .userInfo {
+    max-width: 130px;
+    flex: 1;
+  }
+
+  .actionsContainer {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .userCard {
+    width: 162px;
+  }}
