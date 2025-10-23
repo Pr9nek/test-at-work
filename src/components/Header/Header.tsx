@@ -6,11 +6,6 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
-        {/* <svg className={styles.logoIcon} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="10" fill="#E53935"/>
-          <path d="M12 6L14.5 11H9.5L12 6Z" fill="white"/>
-          <path d="M12 18L9.5 13H14.5L12 18Z" fill="white"/>
-        </svg> */}
         <img src={logImage} alt='logo_picture'></img>
         <span className={styles.logoText}>at-<strong>work</strong></span>
       </Link>

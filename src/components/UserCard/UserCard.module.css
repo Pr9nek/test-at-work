@@ -10,12 +10,15 @@
   max-width: 360px;
 }
 
+.dropdownRef {
+  position: relative;
+}
+
 .userCard:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.userCard.archived 
-  .ava {
+.userCard.archived .ava {
   filter: grayscale(100%);
 }
 
@@ -25,7 +28,7 @@
 }
 
 .infoAndActions {
-  display: contents; 
+  display: contents;
 }
 
 .userInfo {
@@ -47,7 +50,7 @@
   font-size: 15px;
   color: rgba(34, 160, 188, 1);
   font-weight: 600;
-  white-space: normal; 
+  white-space: normal;
 }
 
 .city {
@@ -87,21 +90,23 @@
   color: rgba(89, 89, 89, 1);
 }
 
-.menuButton:focus, 
-.menuButton:focus-visible { 
-  outline: none; 
+.menuButton:focus,
+.menuButton:focus-visible {
+  outline: none;
 }
+
 .dropdown {
   position: absolute;
-  top: 30px;
+  top: 28px;
   right: 0;
   min-width: 200px;
   background: #fff;
   border-radius: 14px;
-  box-shadow: 0 8px 28px 0 rgba(28,44,94,.15);
+  box-shadow: 0 8px 28px 0 rgba(28, 44, 94, .15);
   padding: 8px 0;
   z-index: 20;
   border: 1px solid #eef1f5;
+  border-color: rgba(156, 156, 156, 1);
 }
 
 .dropdownItem {
@@ -127,13 +132,17 @@
   .userCard {
     padding: 12px 8px;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
+  }
+
+  .username {
+    font-weight: 600;
   }
 
   .ava {
     width: 100%;
   }
-  
+
   .avatar {
     width: 100%;
     height: 140px;
@@ -141,7 +150,7 @@
   }
 
   .infoAndActions {
-    display: flex; 
+    display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: flex-start;
@@ -156,22 +165,37 @@
   .actionsContainer {
     flex-shrink: 0;
   }
+
   .dropdown {
-    min-width: 150px;
+    /* min-width: 150px; */
+    min-width: 160px;
     top: 25px;
+    right: -7px;
+  }
+
+  .company {
+    white-space: nowrap;
+  }
+
+  .city {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .userCard {
+    width: 162px;
+    min-height: 242px;
+  }
+
+  .infoAndActions {
+    gap: 0px;
   }
 }
 
-@media (max-width: 650px) {
-  .userCard {
-    width: 162px;
-  }
-  .username {
-    word-break: break-word;
-  }
-  .dropdown {
-    min-width: 162px;
-    top: 25px;
-  }
+@media (max-width: 720px) {
 
+  /* .dropdown {
+    top: 25px;
+    width: 162px;
+  } */
 }

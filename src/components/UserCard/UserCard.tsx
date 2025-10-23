@@ -70,7 +70,7 @@ export default function UserCard({
         </div>
         
         <div className={styles.actionsContainer}>
-          <div ref={dropdownRef} style={{ position: "relative" }}>
+          <div ref={dropdownRef} className={styles.dropdownRef}>
             <button
               className={styles.menuButton}
               onClick={toggleDropdown}
