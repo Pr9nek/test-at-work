@@ -1,55 +1,121 @@
 .header {
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
-  padding: 16px 24px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 16px 150px;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: 700;
-  color: #111827;
-  text-decoration: none;
-}
-
-.nav {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
 }
 
-.navItem {
-  color: #6b7280;
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-weight: 400;
+}
+
+.logoText strong {
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.iconButton:hover {
+  background-color: #f5f5f5;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
+  color: #333;
+  padding: 4px 12px 4px 4px;
+  border-radius: 20px;
+  transition: background-color 0.2s;
+}
+
+.profile:hover {
+  background-color: #f5f5f5;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
   font-size: 14px;
   font-weight: 500;
-  padding: 8px 0;
-  transition: color 0.2s ease;
 }
 
-.navItem:hover {
-  color: #374151;
+@media (max-width: 1040px) {
+  .header {
+    padding: 16px 75px;
+  }
 }
-
-.navItem.active {
-  color: #3b82f6;
-}
-
+/* Мобильная версия */
 @media (max-width: 768px) {
   .header {
     padding: 12px 16px;
   }
-  
-  .logo {
+
+  .logoText {
     font-size: 18px;
   }
-  
-  .nav {
-    gap: 16px;
+
+  .username {
+    display: none;
   }
-  
-  .navItem {
-    font-size: 13px;
+
+  .iconButton {
+    display: none;
+  }
+
+  .profile {
+    padding: 0;
+  }
+
+  .profile:hover {
+    background-color: transparent;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
   }
 }
