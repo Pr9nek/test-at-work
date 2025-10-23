@@ -1,0 +1,161 @@
+/* .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    position: relative;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.modalTitle {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.modalCloseButton {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    color: #666666;
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+
+.modalCloseButton:hover {
+    background: #f5f5f5;
+    color: #000000;
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.modalIconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalIcon {
+    display: block;
+}
+
+.modalText {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 655px) {
+    .modal {
+        padding: 20px;
+        max-width: 343px;
+    }
+
+    .modalTitle {
+        font-size: 16px;
+    }
+
+    .modalText {
+        font-size: 13px;
+    }
+} */
+
+/* SuccessModal.module.css */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    position: relative;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 52px 40px 40px 40px;
+    width: 320px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.closeButton {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgba(89, 89, 89, 1);
+    transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+    color: #000;
+}
+
+.icon {
+    width: 56px;
+    height: 56px;
+    background-color: inherit;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(89, 89, 89, 1);
+    margin: 0;
+}
+
+@media (max-width: 400px) {
+    .text{
+        font-size: 18px;
+    }
+
+}

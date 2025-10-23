@@ -10,6 +10,12 @@
   gap: 12px;
 }
 
+.backText {
+  font-size: 16px; 
+  font-weight: 400; 
+  color: #000000;
+}
+
 .backButton {
   background: none;
   border: none;
@@ -17,9 +23,16 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
   color: #666666;
   transition: color 0.2s ease;
+  font-size: 16px; 
+  font-weight: 600;
+  margin: 0;
+}
+
+.backIcon {
+  display: block; 
 }
 
 .backButton:hover {
@@ -116,93 +129,9 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  max-width: 420px;
-}
-
-.formField {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.label {
-  font-size: 18px;
-  font-weight: 600;
-  color: #000000;
-}
-
-.input {
-  padding: 12px 16px;
-  border: 1px solid #e5e5e5;
-  border-radius: 24px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #000000;
-  background: #ffffff;
-  transition: all 0.2s ease;
-  font-family: inherit;
-}
-
-.input::placeholder {
-  color: #999999;
-}
-
-.input:hover {
-  border-color: #cccccc;
-}
-
-.input:focus {
-  outline: none;
-  border-color: #000000;
-}
-
-.input.error {
-  border-color: #ff4444;
-}
-
-.errorMessage {
-  font-size: 12px;
-  color: #ff4444;
-  margin-top: -4px;
-}
-
-.saveButton {
-  width: 170px;
-  background: #000000;
-  color: #ffffff;
-  border: none;
-  border-radius: 24px;
-  padding: 14px 32px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  align-self: flex-start;
-  margin-top: 8px;
-  font-family: inherit;
-}
-
-.saveButton:hover {
-  background: rgba(244, 244, 244, 1);
-}
-
-.saveButton:active {
-  transform: scale(0.98);
-}
-
-.saveButton:disabled {
-  background: #cccccc;
-  cursor: not-allowed;
-}
-
 .userInfo {
   display: none;
 }
-
 
 @media (max-width: 1024px) {
   .content {
@@ -226,10 +155,6 @@
 @media (max-width: 1140px) {
   .formCard {
     max-width: 560px;
-  }
-
-  .saveButton {
-    width: 287px;
   }
 }
 
@@ -274,31 +199,36 @@
 
   .formTitle {
     margin: 28px 28px 20px;
-  }
-
-  .form {
-    gap: 20px;
-    padding: 0px 28px 28px;
-  }
-
-  .formTitle {
     padding-bottom: 16px;
   }
-}
 
-/* @media (max-width: 655px) {
-  .backButton svg {
+  .backIcon {
     display: none;
   }
+
+  .backButton {
+    position: relative; 
+    padding-left: 18px; 
+    color: #000000;
+    font-weight: 500;
+    gap: 12px;
+  }
   
-  .backButton::after {
+  .backButton::before {
     content: '';
+    position: absolute;
+    left: 0; 
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg); 
     width: 8px;
-    height: 14px;
+    height: 8px;
     border: solid currentColor;
     border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
     display: block;
-    margin-top: -2px;
-  } */
-
+  }
+  
+  .backText {
+    color: #000000;
+    font-weight: 500;
+  }
+}
