@@ -27,16 +27,15 @@
 }
 
 .title {
-  font-size: 16px;
-  font-weight: 400;
-  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(89, 89, 89, 1);
   margin: 0;
 }
 
 .content {
   display: grid;
   grid-template-columns: 380px 1fr;
-  /* gap: 32px; */
   max-width: 1160px;
   margin: 0 auto;
 }
@@ -50,6 +49,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-height: 100%;
 }
 
 .avatarSection {
@@ -74,7 +74,8 @@
 .menuItem:not(:first-child) {
   padding: 24px 0px 12px;
   color: #666666;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
   border-bottom: 1px solid #e5e5e5;
   cursor: pointer;
   transition: background 0.2s ease;
@@ -83,10 +84,8 @@
 .menuItem:first-child {
   border-bottom: 1px solid #e5e5e5;
   padding: 0px 0px 12px;
-}
-
-.menuItem:last-child {
-  border-bottom: none;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .menuItem:hover {
@@ -109,8 +108,8 @@
 }
 
 .formTitle {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 600;
   color: #000000;
   margin: 0 0 24px 0;
   padding-bottom: 16px;
@@ -131,8 +130,8 @@
 }
 
 .label {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 600;
   color: #000000;
 }
 
@@ -140,7 +139,8 @@
   padding: 12px 16px;
   border: 1px solid #e5e5e5;
   border-radius: 24px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
   color: #000000;
   background: #ffffff;
   transition: all 0.2s ease;
@@ -177,8 +177,8 @@
   border: none;
   border-radius: 24px;
   padding: 14px 32px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
   align-self: flex-start;
@@ -187,7 +187,7 @@
 }
 
 .saveButton:hover {
-  background: #333333;
+  background: rgba(244, 244, 244, 1);
 }
 
 .saveButton:active {
@@ -199,7 +199,6 @@
   cursor: not-allowed;
 }
 
-/* Скрываем элементы, которые не нужны в новой структуре */
 .userInfo {
   display: none;
 }
@@ -210,13 +209,13 @@
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  
+
   .sidebar {
     max-width: 380px;
     margin: 0 auto;
     width: 100%;
   }
-  
+
   .formCard {
     max-width: 600px;
     margin: 0 auto;
@@ -228,6 +227,7 @@
   .formCard {
     max-width: 560px;
   }
+
   .saveButton {
     width: 287px;
   }
@@ -236,6 +236,10 @@
 @media (max-width: 655px) {
   .container {
     width: 343px;
+  }
+
+  .title {
+    font-size: 16px;
   }
 
   .content {
@@ -258,7 +262,7 @@
     padding-bottom: 8px;
   }
 
-  .menuItem:not(:first-child){
+  .menuItem:not(:first-child) {
     padding: 20px 0px 8px;
     border-bottom: 1px solid #e5e5e5;
   }
@@ -280,5 +284,21 @@
   .formTitle {
     padding-bottom: 16px;
   }
-
 }
+
+/* @media (max-width: 655px) {
+  .backButton svg {
+    display: none;
+  }
+  
+  .backButton::after {
+    content: '';
+    width: 8px;
+    height: 14px;
+    border: solid currentColor;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    display: block;
+    margin-top: -2px;
+  } */
+
