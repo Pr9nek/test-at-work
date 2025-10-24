@@ -1,10 +1,11 @@
-import { createBrowserRouter } from 'react-router-dom';
+// import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home';
 import EditUser from './pages/EditUser';
 import { fetchJson, queryClient } from './utils/config';
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
     element: <Layout />,
